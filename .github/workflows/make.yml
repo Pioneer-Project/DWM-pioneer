@@ -14,7 +14,7 @@ jobs:
         steps:
         - uses: actions/checkout@v4
         - name: set up libraries
-          run: apt install libx11-dev libxinerama-dev libxft-dev
+          run: sudo apt install libx11-dev libxinerama-dev libxft-dev
         - name: clean
           run: make clean
         - name:
