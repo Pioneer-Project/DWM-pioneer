@@ -1,0 +1,21 @@
+name: CI
+
+on:
+    push:
+        branches: ["main"]
+    pull_request:
+        branches: ["main"]
+
+jobs:
+    build:
+
+        runs-on: ubuntu-latest
+
+        steps:
+        - uses: actions/checkout@v4
+        - name: set up libraries
+          run: sudo apt install libx11-dev libxinerama-dev libxft-dev
+        - name: clean
+          run: make clean
+        - name:
+          run: make
